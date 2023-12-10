@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irina Embrich tribute page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            /* background: rgb(50, 135, 245);
+            background: linear-gradient(90deg, rgba(50, 135, 245, 1) 5%, rgba(0, 0, 0, 1) 24%, rgba(255, 255, 255, 1) 65%); */
+            font-family: Arial, Geneva, Helvetica, sans-serif;
+        }
+
+        .nav {
+            grid-area: nav;
+            width: 100%;
+            float: left;
+
+            & a {
+                text-decoration: solid;
+                font-size: x-large;
+            }
+        }
+
+        .menu {
+            margin: 0;
+            padding: 8px;
+            height: 100%;
+            background-color: #334a94;
+        }
+
+        .menu li {
+            display: inline;
+        }
+
+        .button {
+            color: #ffffff;
+            padding: 8px;
+            text-decoration: none;
+        }
+
+        .button:link {
+            background-color: #334a94;
+            color: #ffffff;
+        }
+
+        .button:hover {
+            background-color: #786ed4;
+        }
+
+        .main {
+            grid-area: main;
+
+            & h2 {
+                text-align: center;
+            }
+        }
+
+        .profile_picture {
+            & img {
+                width: 100%;
+                height: auto;
+            }
+
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            overflow: auto;
+            padding: 15px;
+
+            & h2 {
+                text-align: center;
+            }
+
+            & h3 {
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+        }
+
+        .footer {
+            grid-area: footer;
+            text-align: center;
+        }
+
+        .container {
+            display: grid;
+            height: 100vh;
+            width: 100vw;
+
+            /* Draw grid */
+            grid-template-areas:
+                "nav nav"
+                "sidebar main"
+                "footer footer";
+
+            grid-template-columns: 25% 75%;
+            grid-template-rows: 5% 90% 5%;
+        }
+
+        .bio {
+            overflow: auto;
+
+            & ul {
+                padding: 20px;
+            }
+        }
+
+        .bordered {
+            border: 1px gray solid;
+        }
+
+        ul li {
+            padding: 10px;
+            & img {
+                float: right;
+                width: 32px;
+                height: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container bordered">
+        <nav>
+            <ul class="menu">
+                <li><a class="button" target="_blank" href="https://fie.org/athletes/9370">Fie rank</a></li>
+                <li><a class="button" target="_blank" href="https://www.fencingtimelive.com/events/competitors/ECFE9DFB5C7745D3888EDE06738D831F">Live</a></li>
+                <li><a class="button" target="_blank" href="https://www.facebook.com/klubIREM/">IREM</a></li>
+            </ul>
+        </nav>
+
+        <div class="sidebar bordered">
+            <h2>Medals</h2>
+            <h3>World cup</h3>
+            <ul>
+                <li>Leipzig (GERMANY), 2012-06-29<img src="static/olympic_medal_silver.png" alt="silv medal"></li>
+                <li>Buenos Aires (ARGENTINA), 2016-02-12<img src="static/olympic_medal_silver.png" alt="silv medal"></li>
+                <li>Barcelone (SPAIN), 2017-01-20<img src="static/olympic_medal_silver.png" alt="silv medal"></li>
+            </ul>
+            <h3>World Championship</h3>
+            <ul>
+                <li>Turin (ITALY), 2006-10-02<img src="static/olympic_medal_silver.png" alt="silv medal"></li>
+                <li>St-Petersbourg (RUSSIA), 2007-09-30<img src="static/olympic_medal_bronze.png" alt="bronze medal">
+                </li>
+            </ul>
+            <h3>Grand Prix</h3>
+            <ul>
+                <li>Budapest (HUNGARY), 2014-02-01<img src="static/olympic_medal_silver.png" alt="silv medal"></li>
+                <li>Budapest (HUNGARY), 2020-03-06<img src="static/olympic_medal_bronze.png" alt="bronze medal"></li>
+            </ul>
+            <h3>Zone Championships</h3>
+            <ul>
+                <li>Gand (BELGIUM), 2007-07-02<img src="static/olympic_medal_bronze.png" alt="bronze medal"></li>
+            </ul>
+            <h3>Other Tournaments</h3>
+            <ul>
+                <li>Turku (FINLAND), 2002-10-12<img src="static/olympic_medal_gold.png" alt="gold medal"></li>
+                <li>Stockholm (SWEDEN), 2006-02-11<img src="static/olympic_medal_gold.png" alt="gold medal"></li>
+                <li>Turku (FINLAND), 2008-10-18<img src="static/olympic_medal_gold.png" alt="gold medal"></li>
+                <li>Oslo (NORWAY), 2011-11-27<img src="static/olympic_medal_gold.png" alt="gold medal"></li>
+                <li>Stockholm (SWEDEN), 2012-01-22<img src="static/olympic_medal_gold.png" alt="gold medal"></li>
+                <li>Turku (FINLAND), 2012-10-14<img src="static/olympic_medal_gold.png" alt="gold medal"></li>
+                <li>Bratislava (SLOVAKIA), 2018-02-04<img src="static/olympic_medal_gold.png" alt="gold medal"></li>
+                <li>Bratislava (SLOVAKIA), 2018-02-04<img src="static/olympic_medal_gold.png" alt="gold medal"></li>
+                <li>Stockholm (SWEDEN), 2018-09-23<img src="static/olympic_medal_gold.png" alt="gold medal"></li>
+                <li>Split (CROATIA), 2022-10-15<img src="static/olympic_medal_gold.png" alt="gold medal"></li>
+                <li>Oslo (NORWAY), 2004-11-13<img src="static/olympic_medal_silver.png" alt="silv medal"></li>
+                <li>Oslo (NORWAY), 2006-11-11<img src="static/olympic_medal_silver.png" alt="silv medal"></li>
+                <li>Stockholm (SWEDEN), 2013-01-13<img src="static/olympic_medal_silver.png" alt="silv medal"></li>
+                <li>Oslo (NORWAY), 2013-11-24<img src="static/olympic_medal_silver.png" alt="silv medal"></li>
+                <li>Stockholm (SWEDEN), 2015-01-11<img src="static/olympic_medal_silver.png" alt="silv medal"></li>
+                <li>Turku (FINLAND), 2018-10-06<img src="static/olympic_medal_silver.png" alt="silv medal"></li>
+                <li>Turku (FINLAND), 2022-09-24<img src="static/olympic_medal_silver.png" alt="silv medal"></li>
+                <li>Oslo (NORWAY), 2022-10-30<img src="static/olympic_medal_silver.png" alt="silv medal"></li>
+                <li>Oslo (NORWAY), 2007-11-10<img src="static/olympic_medal_bronze.png" alt="bronze medal"></li>
+                <li>Oslo (NORWAY), 2014-11-23<img src="static/olympic_medal_bronze.png" alt="bronze medal"></li>
+                <li>Turku (FINLAND), 2019-09-28<img src="static/olympic_medal_bronze.png" alt="bronze medal"></li>
+                <li>Split (CROATIA), 2023-10-15<img src="static/olympic_medal_bronze.png" alt="bronze medal"></li>
+            </ul>
+        </div>
+
+        <div class="main bordered">
+            <div class="bio">
+                <div class="profile_picture">
+                    <img src="static/irina_embrich.jpg" alt="fencer"></img>
+                </div>
+                <table>
+                    <caption>
+                        <h2>Sports specific information</h2>
+                    </caption>
+                    <tbody>
+                        <tr>
+                            <td>Career start:</td>
+                            <td></td>
+                            <td>She began competing in fencing in 1996.</td>
+                        </tr>
+                        <tr>
+                            <td>Club:</td>
+                            <td></td>
+                            <td>Vehklemisklubi IREM, Tallinn, EST</td>
+                        </tr>
+                        <tr>
+                            <td>Name of coach:</td>
+                            <td></td>
+                            <td>Kaido Kaaberma, EST</td>
+                        </tr>
+                        <tr>
+                            <td>Handedness:</td>
+                            <td></td>
+                            <td>Left</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr />
+                <ul type="square">
+                    <li>
+                        Memorable sporting achievement Winning gold in team epee at the 2020 Olympic Games in Tokyo.
+                    </li>
+                    <li>
+                        Awards and honours In 2022 she received the Order of the White Star 2nd class in recognition of
+                        her
+                        services to the Estonian state following her gold medal in team epee at the 2020 Olympic Games
+                        in
+                        Tokyo.</li>
+
+                    <li>She and her teammates Julia Beljajeva, Erika Kirpu, and Katrina Lehis received the Best Female
+                        Multiple
+                        Athlete Event of Tokyo 2020 prize at the 2021 ANOC [Association of National Olympic Committees]
+                        Awards
+                        in Crete, Greece.
+                    </li>
+                    <li>
+                        In 2019 she was presented with the Order of the White Star [Third Class] in Estonia.
+                    </li>
+                    <li>
+                        She was part of the 2017 Team of the Year in Estonia.
+                    </li>
+                    <li>
+                        She was named the 2007 Best Female Athlete in Estonia.
+                    </li>
+                    <li>
+                        Milestones Along with Julia Beljajeva, Erika Kirpu, and Katrina Lehis, she was part of the
+                        women's
+                        epee
+                        team that won Estonia's first gold medal in fencing at the Olympic Games. They beat the Republic
+                        of
+                        Korea in the final at the 2020 Games in Tokyo.
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="footer bordered">
+            <a target="_blank" href="https://www.instagram.com/iremfencing/"><img src="static/instagram_logo.png" alt="instagram"></a>
+        </div>
+    </div>
+</body>
+
+</html>
