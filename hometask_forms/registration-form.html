@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registrion-form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,100&display=swap" rel="stylesheet">
+    <title>Restaraunt table booking</title>
+</head>
+
+<body>
+        <form action="#" method="get" class="dining-booking__form">
+            <div class="dining-booking-form__header">Dining table booking</div>
+            <div class="dining-booking-form__item">
+                <label class="dining-booking-form__label" for="name">Name: </label>
+                <input class="dining-booking-form__input" type="text" name="name" id="name" placeholder="Your name"required />
+            </div>
+            <div class="dining-booking-form__item">
+                <label class="dining-booking-form__label" for="user-email">Phone: </label>
+                <input class="dining-booking-form__input" type="text" name="phone" id="phone" placeholder="Phone number"required />
+            </div>
+            <div class="dining-booking-form__item">
+                <label class="dining-booking-form__label" for="date">Date: </label>
+                <input class="dining-booking-form__input" type="datetime-local" name="date" id="date" required>
+            </div>
+            <div class="dining-booking-form__item">
+                <label class="dining-booking-form__label" for="participants">Number of people: </label>
+                <input class="dining-booking-form__input" type="number" name="participants" id="participants" step="1" min="1" max="6" value="1" required />
+            </div>
+            <div class="dining-booking-form__item">
+                <label>Food option:</label>
+                <div class="dining-booking-form__food-preferences-radio">
+                    <div>
+                        <input type="radio" name="food_preference" id="meat" value="meat" checked>
+                        <label class="dining-booking-form__label" for="meat">Meat</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="food_preference" id="fish" value="fish">
+                        <label class="dining-booking-form__label" for="fish">Fish</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="food_preference" id="vegan" value="vegan">
+                        <label class="dining-booking-form__label" for="vegan">Vegan</label>
+                    </div>
+                </div>
+            </div>
+            <div class="dining-booking-form__item">
+                    <label for="include_wine" class="dining-booking-form__item-checkbox">
+                        <input type="checkbox" name="include_wine" id="include_wine" value="true" unchecked> Include wine package?
+                    </label>
+            </div>
+            <div class="dining-booking-form__item">
+                <label class="dining-booking-form__label" for="special_request">Special requests</label>
+                <div>
+                    <textarea name="special_request" id="special_request" maxlength="1000"></textarea>
+                </div>
+            </div>
+            <div class="dining-booking-form__item">
+                <input class="dining-booking-form__submit" type="submit" value="Book a table" />
+            </div>
+        </form>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Serif', serif;
+}
+
+.dining-booking__form {
+    position: relative;
+    margin: 10% auto;
+    min-height: 60%;
+    width: 25%;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.6);
+    background: white;
+    padding: 0px 0px 5px 15px;
+    border-radius: 8px;
+}
+
+.dining-booking-form__header {
+    padding: 10px;
+    text-align: center;
+}
+
+.dining-booking-form__input {
+    display: block;
+    margin: 0px 0px 15px 20px;
+    padding: 10px;
+    width: 80%;
+    height: 5%;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #aaa;
+}
+
+.dining-booking-form__food-preferences-radio {
+    padding: 10px;
+}
+
+.dining-booking-form__item {
+    padding-bottom: 10px;
+    & textarea {
+        width: 90%;
+        resize: none;
+    }
+}
+
+input[type="checkbox"] {
+    display: inline-block;
+    vertical-align: middle;
+}
