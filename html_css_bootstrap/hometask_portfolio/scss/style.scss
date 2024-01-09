@@ -1,0 +1,128 @@
+@import '_config';
+
+@font-face {
+  font-family: 'Courgette', cursive;
+  src: url('portfolio/assests/fonts/Courgette/Courgette-Regular.ttf');
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  background-color: $light-color;
+}
+
+.navigation {
+  background-color: $main-color;
+  font-family: 'Courgette', cursive;
+  display: flex;
+  align-items: center;
+}
+
+.burger-menu {
+  display: none;
+  padding: 10px;
+}
+
+.burger-menu__line {
+  width: 20px;
+  height: 4px;
+  background-color: $light-color;
+  margin-bottom: 3px;
+}
+
+.navigation__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation__item {
+  display: inline-block;
+  margin: 10px;
+}
+
+.navigation__item a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: $light-color;
+  padding: 5px 0;
+}
+
+.navigation__item a:hover,
+.navigation__item a:active {
+  color: $primary-color;
+  border-bottom: 2px solid $primary-color;
+}
+
+.button--cta {
+  display: inline-block;
+  margin-left: auto;
+  padding: 10px;
+
+  a {
+    color: $light-color;
+    background-color: $dark-color;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+}
+
+.button--cta a:hover,
+.button--cta a:active {
+  border: none;
+  color: $dark-color;
+  background-color: $light-color;
+}
+
+footer {
+  background-color: $main-color;
+  height: 50px;
+  margin-top: auto;
+}
+
+@media only screen and (max-width: 480px) {
+  .navigation {
+    flex-wrap: wrap;
+  }
+
+  .navigation__items {
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+
+  .navigation__items.active {
+    display: block;
+  }
+
+  .navigation__item {
+    display: block;
+    margin: 0;
+    border-top: 1px solid $light-color;
+  }
+
+  .navigation__item a:hover,
+  .navigation__item a:active {
+    color: $primary-color;
+    border-bottom: none;
+  }
+
+  .burger-menu {
+    display: inline-block;
+    margin-right: auto;
+  }
+
+}
+
+
+
+
+
