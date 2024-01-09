@@ -39,7 +39,9 @@ console.log(numsRes);
 // добавить те же числа, но в обратном порядке.
 const numberRow = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const reversedNumberRow = [];
-numberRow.reverse().forEach((item) => { reversedNumberRow.push(item); });
+numberRow.reverse().forEach((item) => {
+    reversedNumberRow.push(item);
+});
 console.log(reversedNumberRow);
 
 
@@ -71,6 +73,6 @@ const cars = [
 ];
 
 cars.forEach((car) => {
-    console.log(`This is ${car.color} $${car.make}. It costs ${car.price}€`);
+    console.log(`This is ${car.color} ${car.make}. It costs ${car.price}€`);
 })
 
