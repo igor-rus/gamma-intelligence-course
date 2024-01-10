@@ -12,9 +12,12 @@ const names = ['jack', 'sarah', 'mary', 'joey', 'chris', 'samantha'];
 const namesObject = [];
 
 names.forEach((item) => {
-    let pair = {};
     const capitalizedFirstLetter = item.charAt(0).toUpperCase() + item.slice(1);
-    pair[capitalizedFirstLetter] = item.length;
+    let pair = {
+        "name": capitalizedFirstLetter,
+        "nameLength": item.length
+    };
+
     namesObject.push(pair);
 })
 console.log(namesObject);
