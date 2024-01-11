@@ -86,15 +86,6 @@
   background-color: #FBEEC1;
 }
 
-.gallery {
-  width: 100%;
-  padding: 0 2rem;
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
 .polaroid {
   background: #fff;
   padding-left: 1rem;
@@ -116,12 +107,6 @@
   line-height: 2em;
 }
 
-.gallery-item {
-  width: 30%;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
 pre {
   overflow-x: auto;
   white-space: pre-wrap;
@@ -131,21 +116,18 @@ pre {
   word-wrap: break-word;
 }
 
-section {
+.two-column {
   display: flex;
   padding: 1.5rem;
-}
-
-.bio {
   justify-content: space-between;
 }
-.bio .first-column {
+.two-column .first-column {
   padding-left: 1rem;
 }
-.bio ul {
+.two-column ul {
   list-style-position: inside;
 }
-.bio hr.vertical {
+.two-column hr.vertical {
   min-height: 100%;
   max-height: 100vh;
   border: 1px solid #659DBD;
@@ -154,10 +136,17 @@ section {
 }
 
 .skills {
+  display: flex;
+  padding: 1.5rem;
   justify-content: space-between;
 }
 .skills ul {
   list-style-position: inside;
+}
+
+.hobbies {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 footer {
@@ -200,16 +189,16 @@ footer {
     display: inline-block;
     margin-right: auto;
   }
-  .bio {
+  .two-column {
     flex-direction: column;
   }
-  .bio .first-column {
+  .two-column .first-column {
     padding: 0;
   }
-  .bio .first-column img {
+  .two-column .first-column img {
     width: 95%;
   }
-  .bio hr {
+  .two-column hr {
     display: none;
   }
 }

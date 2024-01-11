@@ -19,80 +19,75 @@
                 <div class="burger-menu__line"></div>
             </div>
             <div class="button--cta">
-                <a href="#">Contact me</a>
+                <a href="mailto:igy1986@gmail.com">Contact me</a>
             </div>
             <ul class="navigation-items" id="navigation-items">
                 <li class="navigation-item">
                     <a class="navigation-item__link" href="../about.html">About</a>
                 </li>
                 <li class="navigation-item">
-                    <a class="navigation-item__link" href="#">Hobbies</a>
+                    <a class="navigation-item__link" href="../pages/hobbies.html">Hobbies</a>
                 </li>
             </ul>
         </header>
-        <section class="content">
-            <div class="gallery">
-                <div class="gallery-item">
-                    <div class="polaroid"><img src="https://picsum.photos/400/400">
-                        <div class="caption">Project 1</div>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <div class="polaroid"><img src="https://picsum.photos/400/400">
-                        <div class="caption">Project 2</div>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <div class="polaroid"><img src="https://picsum.photos/400/400">
-                        <div class="caption">Project 3</div>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <div class="polaroid"><img src="https://picsum.photos/400/400">
-                        <div class="caption">Project 4</div>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <div class="polaroid"><img src="https://picsum.photos/400/400">
-                        <div class="caption">Project 5</div>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <div class="polaroid"><img src="https://picsum.photos/400/400">
-                        <div class="caption">Project 6</div>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <div class="polaroid"><img src="https://picsum.photos/400/400">
-                        <div class="caption">Project 7</div>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <div class="polaroid"><img src="https://picsum.photos/400/400">
-                        <div class="caption">Project 8</div>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <div class="polaroid"><img src="https://picsum.photos/400/400">
-                        <div class="caption">Project 9</div>
-                    </div>
-                </div>
+        <section class="two-column">
+            <div class="first-column">
+                <img src="../assets/static/fencing.png" alt="profile picture">
+            </div>
+            <hr class="vertical" />
+            <div class="second-column">
+                <pre>
+<b>Fencing:</b> A dynamic and strategic sport that involves skillful swordplay. 
+It's not just a physical exercise but also a mental challenge, requiring quick reflexes, precise movements, and strategic planning. 
+There are three types of weapons used in fencing: foil, épée, and sabre, each with its own set of rules and techniques.
+                </pre>
+            </div>
+        </section>
+        <section class="two-column">
+            <div class="first-column">
+                <img src="../assets/static/snowboarding.png" alt="profile picture">
+            </div>
+            <hr class="vertical" />
+            <div class="second-column">
+                <pre>
+<b>Snowboarding:</b> This exhilarating winter sport combines elements of surfing, skateboarding, and skiing. 
+It involves descending a snow-covered slope while standing on a snowboard attached to your feet. 
+Snowboarding is known for its freedom of expression, allowing for creative and stylish maneuvers on the snow.
+                </pre>
+            </div>
+        </section>
+        <section class="two-column">
+            <div class="first-column">
+                <img src="../assets/static/treasure_hunting.png" alt="profile picture">
+            </div>
+            <hr class="vertical" />
+            <div class="second-column">
+                <pre>
+<b>Metal Detector Treasure Hunting:</b> A hobby that combines outdoor adventure with the thrill of discovery.
+Using a metal detector, you explore various environments such as beaches, 
+old fields, or historical sites, searching for hidden treasures and artifacts. 
+It's not only exciting but also offers a chance to learn about history and archaeology.
+                </pre>
+            </div>
+        </section>
+        <section class="two-column">
+            <div class="first-column">
+                <img src="../assets/static/board_games.png" alt="profile picture">
+            </div>
+            <hr class="vertical" />
+            <div class="second-column">
+                <pre>
+<b>Dungeons and Dragons:</b> D&D is a fantasy tabletop role-playing game that fosters imagination and storytelling. 
+As a player, you create a character and embark on epic adventures in a rich, fantasy world. 
+It's a social game that involves teamwork, strategy, and problem-solving, making each session unique and engaging.
+                </pre>
             </div>
         </section>
         <footer>
             <div class="social-media">
-                <a class="social-media__item" href="#"><img src="../assets/icons/facebook.png"
-                        alt="facebook_logo" /></a>
-                <a class="social-media__item" href="#"><img src="../assets/icons/insta.png" alt="instagram_logo" /></a>
-                <a class="social-media__item" href="#"><img src="../assets/icons/telega.png" alt="telegram_logo" /></a>
+                <a class="social-media__item" href="https://www.facebook.com/igor.rusovitch"><img src="assets/icons/facebook.png" alt="facebook_logo" /></a>
+                <a class="social-media__item" href="https://www.instagram.com/igy1986"><img src="assets/icons/insta.png" alt="instagram_logo" /></a>
+                <a class="social-media__item" href="http://t.me/YngvarrNord"><img src="assets/icons/telega.png" alt="telegram_logo" /></a>
             </div>
         </footer>
     </div>
@@ -101,6 +96,12 @@
 <script>
     const toggleButton = document.getElementById('toggle');
     const navigationItems = document.getElementById('navigation-items');
+    document.querySelectorAll('.navigation-item__link').forEach(link => {
+        console.log(link.href, window.location.href);
+        if(link.href === window.location.href) {
+            link.setAttribute('aria-current', 'page');
+        }
+    });
 
     toggleButton.addEventListener('click', () => {
         navigationItems.classList.toggle('active');

@@ -94,17 +94,6 @@
   background-color: $light-color;
 }
 
-//Hobbies page
-
-.gallery {
-  width: 100%;
-  padding: 0 2rem;
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
 .polaroid {
   background: #fff;
   padding-left: 1rem;
@@ -124,12 +113,6 @@
   line-height: 2em;
 }
 
-.gallery-item {
-  width: 30%;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
 pre {
   overflow-x: auto;
   white-space: pre-wrap;
@@ -139,14 +122,12 @@ pre {
   word-wrap: break-word;
 };
 
-section {
-  display: flex;
-  padding: 1.5rem;
-}
-
 
 //Main page
-.bio {
+.two-column {
+  display: flex;
+  padding: 1.5rem;
+
   justify-content: space-between;
 
   .first-column {
@@ -168,10 +149,18 @@ section {
 }
 
 .skills {
+  display: flex;
+  padding: 1.5rem;
   justify-content: space-between;
   ul {
     list-style-position: inside;
   }
+}
+
+//Hobbies page
+.hobbies {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 
@@ -224,7 +213,7 @@ footer {
     margin-right: auto;
   }
 
-  .bio {
+  .two-column {
     flex-direction: column;
 
     .first-column {
