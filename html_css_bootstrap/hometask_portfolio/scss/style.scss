@@ -5,6 +5,8 @@
   src: url('../assets/fonts/Courgette/Courgette-Regular.ttf');
 }
 
+//General
+
 * {
   padding: 0;
   margin: 0;
@@ -20,6 +22,8 @@
   flex-direction: column;
   background-color: $light-color;
 }
+
+//Navigation
 
 .navigation {
   background-color: $main-color;
@@ -72,8 +76,8 @@
   a {
     color: $light-color;
     background-color: $dark-color;
-    padding: 4px 8px;
-    border-radius: 4px;
+    padding: 5px 10px;
+    border-radius: 5px;
     text-decoration: none;
   }
 }
@@ -84,6 +88,8 @@
   color: $dark-color;
   background-color: $light-color;
 }
+
+//Hobbies page
 
 .gallery {
   width: 100%;
@@ -96,9 +102,12 @@
 
 .polaroid {
   background: #fff;
-  padding: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
   box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.2);
-
+  transform: rotate(3deg);
 }
 .polaroid > img{
   max-width: 100%;
@@ -116,6 +125,53 @@
   margin-bottom: 2rem;
 }
 
+pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+};
+
+section {
+  display: flex;
+  padding: 1.5rem;
+}
+
+
+//Main page
+.bio {
+  justify-content: space-between;
+
+  .first-column {
+    padding-left: 1rem;
+  }
+
+  ul {
+    list-style-position: inside;
+  }
+
+  hr.vertical {
+    min-height: 100%;
+    max-height: 100vh;
+    border: 1px solid $main-color;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+  }
+}
+
+.skills {
+  justify-content: space-between;
+  ul {
+    list-style-position: inside;
+  }
+}
+
+
+//Footer
+
 footer {
   background-color: $main-color;
   margin-top: auto;
@@ -126,10 +182,11 @@ footer {
   justify-content: center;
   align-items: center;
   a {
-    padding: 10px;
+    padding: 1rem;
   }
 }
 
+//Breakpoints
 @media only screen and (max-width: 480px) {
   .navigation {
     flex-wrap: wrap;
@@ -160,6 +217,22 @@ footer {
   .burger-menu {
     display: inline-block;
     margin-right: auto;
+  }
+
+  .bio {
+    flex-direction: column;
+
+    .first-column {
+      padding: 0;
+      img {
+        width: 95%;
+      }
+    }
+
+    hr {
+      display: none;
+    }
+
   }
 
 }

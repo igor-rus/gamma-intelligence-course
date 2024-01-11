@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -8,91 +9,84 @@
     <title>Portfolio page</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
     <div class="wrapper">
-            <header class="navigation">
-                <div class="burger-menu" id="toggle">
-                    <div class="burger-menu__line"></div>
-                    <div class="burger-menu__line"></div>
-                    <div class="burger-menu__line"></div>
-                </div>
-                <div class="button--cta">
-                    <a href="#">Contact me</a>
-                </div>
-                <ul class="navigation__items" id="navigation-items">
-                    <li class="navigation__item">
-                        <a href="pages/about.html">About</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a href="pages/hobbies.html">Hobbies</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a href="#">Home</a>
-                    </li>
-                </ul>
-        </header>
-        <section class="content">
-            <div class="gallery">
-                <div class="gallery-item">
-                    <div class="polaroid"><img src="https://picsum.photos/400/400">
-                        <div class="caption">Project 1</div>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <div class="polaroid"><img src="https://picsum.photos/400/400">
-                        <div class="caption">Project 2</div>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <div class="polaroid"><img src="https://picsum.photos/400/400">
-                        <div class="caption">Project 3</div>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <div class="polaroid"><img src="https://picsum.photos/400/400">
-                        <div class="caption">Project 4</div>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <div class="polaroid"><img src="https://picsum.photos/400/400">
-                        <div class="caption">Project 5</div>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <div class="polaroid"><img src="https://picsum.photos/400/400">
-                        <div class="caption">Project 6</div>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <div class="polaroid"><img src="https://picsum.photos/400/400">
-                        <div class="caption">Project 7</div>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <div class="polaroid"><img src="https://picsum.photos/400/400">
-                        <div class="caption">Project 8</div>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <div class="polaroid"><img src="https://picsum.photos/400/400">
-                        <div class="caption">Project 9</div>
-                    </div>
-                </div>
+        <header class="navigation">
+            <div class="burger-menu" id="toggle">
+                <div class="burger-menu__line"></div>
+                <div class="burger-menu__line"></div>
+                <div class="burger-menu__line"></div>
             </div>
+            <div class="button--cta">
+                <a href="#">Contact me</a>
+            </div>
+            <ul class="navigation__items" id="navigation-items">
+                <li class="navigation__item">
+                    <a href="#">About</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="pages/hobbies.html">Hobbies</a>
+                </li>
+            </ul>
+        </header>
+        <section class="bio">
+            <div class="first-column">
+                <img class="polaroid" src="../hometask_portfolio/assets/static/profile_picture.webp" alt="profile picture">
+            </div>
+            <hr class="vertical" />
+            <div class="second-column">
+                <pre>Hello, I am Igor!
+
+Software engineer equipped with extensive experience in software development.
+Employs abilities to explain technical challenges to Non-tech-savvy users, 
+perform planning and implement business ideas into working software.
+                
+Honest, responsible, polite, team-player.
+                
+Into competitive sports: fencing
+Hobbies: treasure hunting, Board games
+Likes: snowboarding, reading detective novels
+                </pre>
+            </div>
+        </section>
+        <section class="skills">
+            <h4>Skills</h4>
+            <pre>
+                Technical:
+                <ul>
+                    <li><b>Programming languages:</b> Java, JavaScript, TypeScript, C#</li>
+                    <li><b>Frameworks:</b> Spring, SpringBoot, Play, Wicket, Hibernate</li>
+                    <li><b>Web development:</b> HTML, CSS, React, Vuejs, Node</li>
+                    <li><b>Database management:</b> SQL, NoSQL, PostgreSQL, MongoDB</li>
+                    <li><b>Cloud platforms:</b> Google Cloud, Oracle cloud</li>
+                    <li><b>Cloud platforms:</b> Knowledge of DevOps tools: Docker, Kubernetes, CI/CD</li>
+                    <li><b>Messaging:</b> Apache Kafka</li>
+                    <li><b>Testing frameworks:</b> Mockito, Junit, Spock</li>
+                    <li><b>Version control systems:</b> Git, SVN, Visual SourceSafe</li>
+                    <li><b>Monitoring systems:</b> Datadog, GCP Montiroing, Sentry</li>
+                </ul>
+                
+                Soft:  
+                <ul>
+                    <li><b>Communication:</b> Effective communication is key for understanding project requirements,
+explaining technical concepts to non-technical stakeholders, and collaborating
+with team members.</li>
+                    <li><b>Problem-Solving:</b> The core of software engineering is solving problems.
+Being able to think analytically and approach
+problems creatively is vital.</li>
+                    <li><b>Continuous Learning:</b> A willingness to continuously learn and stay updated
+with the latest technological advancements and programming languages.</li>
+                    <li><b>Empathy and User Focus:</b> Understanding and empathizing with user needs and experiences
+can greatly improve the quality and usability of software products.</li>
+                </ul>
+            </pre>
         </section>
         <footer>
             <div class="social-media">
-                <a class="social-media__item" href="#"><img src="assets/icons/facebook.png" alt="facebook_logo"/></a>
-                <a class="social-media__item" href="#"><img src="assets/icons/insta.png" alt="instagram_logo"/></a>
-                <a class="social-media__item" href="#"><img src="assets/icons/telega.png" alt="telegram_logo"/></a>
+                <a class="social-media__item" href="#"><img src="assets/icons/facebook.png" alt="facebook_logo" /></a>
+                <a class="social-media__item" href="#"><img src="assets/icons/insta.png" alt="instagram_logo" /></a>
+                <a class="social-media__item" href="#"><img src="assets/icons/telega.png" alt="telegram_logo" /></a>
             </div>
         </footer>
     </div>
@@ -106,4 +100,5 @@
         navigationItems.classList.toggle('active');
     })
 </script>
+
 </html>

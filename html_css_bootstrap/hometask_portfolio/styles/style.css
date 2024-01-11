@@ -69,8 +69,8 @@
 .button--cta a {
   color: #FBEEC1;
   background-color: #8D8741;
-  padding: 4px 8px;
-  border-radius: 4px;
+  padding: 5px 10px;
+  border-radius: 5px;
   text-decoration: none;
 }
 
@@ -92,8 +92,12 @@
 
 .polaroid {
   background: #fff;
-  padding: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
   box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+  transform: rotate(3deg);
 }
 
 .polaroid > img {
@@ -113,6 +117,44 @@
   margin-bottom: 2rem;
 }
 
+pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+section {
+  display: flex;
+  padding: 1.5rem;
+}
+
+.bio {
+  justify-content: space-between;
+}
+.bio .first-column {
+  padding-left: 1rem;
+}
+.bio ul {
+  list-style-position: inside;
+}
+.bio hr.vertical {
+  min-height: 100%;
+  max-height: 100vh;
+  border: 1px solid #659DBD;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.skills {
+  justify-content: space-between;
+}
+.skills ul {
+  list-style-position: inside;
+}
+
 footer {
   background-color: #659DBD;
   margin-top: auto;
@@ -124,7 +166,7 @@ footer {
   align-items: center;
 }
 .social-media a {
-  padding: 10px;
+  padding: 1rem;
 }
 
 @media only screen and (max-width: 480px) {
@@ -152,6 +194,18 @@ footer {
   .burger-menu {
     display: inline-block;
     margin-right: auto;
+  }
+  .bio {
+    flex-direction: column;
+  }
+  .bio .first-column {
+    padding: 0;
+  }
+  .bio .first-column img {
+    width: 95%;
+  }
+  .bio hr {
+    display: none;
   }
 }
 
