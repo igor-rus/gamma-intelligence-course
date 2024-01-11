@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'Courgette', cursive;
-  src: url('portfolio/assests/fonts/Courgette/Courgette-Regular.ttf');
+  src: url('../assets/fonts/Courgette/Courgette-Regular.ttf');
 }
 
 * {
@@ -12,8 +12,11 @@
 }
 
 .wrapper {
-  min-height: 100svh;
   display: flex;
+  max-width: 1200px;
+  min-height: 100svh;
+  margin: 0 auto;
+  float: none;
   flex-direction: column;
   background-color: $light-color;
 }
@@ -82,10 +85,49 @@
   background-color: $light-color;
 }
 
+.gallery {
+  width: 100%;
+  padding: 0 2rem;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.polaroid {
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.2);
+
+}
+.polaroid > img{
+  max-width: 100%;
+  height: auto;
+}
+.caption {
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 2em;
+}
+
+.gallery-item {
+  width: 30%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 footer {
   background-color: $main-color;
-  height: 50px;
   margin-top: auto;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    padding: 10px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
