@@ -144,11 +144,6 @@ pre {
   list-style-position: inside;
 }
 
-.hobbies {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
 footer {
   background-color: #659DBD;
   margin-top: auto;
