@@ -21,12 +21,12 @@
             <div class="button--cta">
                 <a href="#">Contact me</a>
             </div>
-            <ul class="navigation__items" id="navigation-items">
-                <li class="navigation__item">
-                    <a href="#">About</a>
+            <ul class="navigation-items" id="navigation-items">
+                <li class="navigation-item">
+                    <a class="navigation-item__link" href="about.html">About</a>
                 </li>
-                <li class="navigation__item">
-                    <a href="pages/hobbies.html">Hobbies</a>
+                <li class="navigation-item">
+                    <a class="navigation-item__link" href="../hometask_portfolio/pages/hobbies.html">Hobbies</a>
                 </li>
             </ul>
         </header>
@@ -95,6 +95,11 @@ can greatly improve the quality and usability of software products.</li>
 <script>
     const toggleButton = document.getElementById('toggle');
     const navigationItems = document.getElementById('navigation-items');
+    document.querySelectorAll('.navigation-item__link').forEach(link => {
+        if(link.href === window.location.href) {
+            link.setAttribute('aria-current', 'page');
+        }
+    });
 
     toggleButton.addEventListener('click', () => {
         navigationItems.classList.toggle('active');

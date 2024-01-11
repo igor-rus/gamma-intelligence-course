@@ -37,28 +37,33 @@
   margin-bottom: 3px;
 }
 
-.navigation__items {
+.navigation-items {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.navigation__item {
+.navigation-item {
   display: inline-block;
   margin: 10px;
 }
 
-.navigation__item a {
+.navigation-item a {
   text-decoration: none;
   font-weight: bolder;
   color: #FBEEC1;
   padding: 5px 0;
 }
 
-.navigation__item a:hover,
-.navigation__item a:active {
+.navigation-item a:hover,
+.navigation-item a:active {
   color: #DAAD86;
   border-bottom: 2px solid #DAAD86;
+}
+
+.navigation-item__link[aria-current=page] {
+  color: #DAAD86;
+  border-bottom: 0.15rem solid #DAAD86;
 }
 
 .button--cta {

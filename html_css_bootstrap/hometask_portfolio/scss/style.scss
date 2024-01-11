@@ -44,28 +44,33 @@
   margin-bottom: 3px;
 }
 
-.navigation__items {
+.navigation-items {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.navigation__item {
+.navigation-item {
   display: inline-block;
   margin: 10px;
 }
 
-.navigation__item a {
+.navigation-item a {
   text-decoration: none;
   font-weight: bolder;
   color: $light-color;
   padding: 5px 0;
 }
 
-.navigation__item a:hover,
-.navigation__item a:active {
+.navigation-item a:hover,
+.navigation-item a:active {
   color: $primary-color;
   border-bottom: 2px solid $primary-color;
+}
+
+.navigation-item__link[aria-current="page"] {
+  color: $primary-color;
+  border-bottom: 0.15rem solid $primary-color;
 }
 
 .button--cta {
