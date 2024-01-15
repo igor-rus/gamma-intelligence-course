@@ -1,7 +1,9 @@
-@font-face {
-  font-family: "Courgette", cursive;
-  src: url("../assets/fonts/Courgette/Courgette-Regular.ttf");
+html {
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 400;
+  font-style: normal;
 }
+
 * {
   padding: 0;
   margin: 0;
@@ -20,7 +22,6 @@
 
 .navigation {
   background-color: #659DBD;
-  font-family: "Courgette", cursive;
   display: flex;
   align-items: center;
 }
@@ -69,7 +70,7 @@
 .button--cta {
   display: inline-block;
   margin-left: auto;
-  padding: 10px;
+  padding: 0.8rem;
 }
 .button--cta a {
   color: #FBEEC1;
@@ -88,10 +89,7 @@
 
 .polaroid {
   background: #fff;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
+  padding: 1rem 1rem 2rem;
   box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
   transform: rotate(3deg);
 }
@@ -113,15 +111,23 @@ pre {
   white-space: -moz-pre-wrap;
   white-space: -o-pre-wrap;
   word-wrap: break-word;
+  font-family: "Anonymous Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
 }
 
 .two-column {
   display: flex;
   padding: 1.5rem;
+  text-align: left;
   justify-content: space-between;
 }
-.two-column .first-column {
+.two-column .left {
   padding-left: 1rem;
+}
+.two-column .right {
+  padding-right: 1rem;
 }
 .two-column ul {
   list-style-position: inside;
@@ -141,6 +147,9 @@ pre {
 }
 .skills ul {
   list-style-position: inside;
+}
+.skills .left {
+  width: 50%;
 }
 
 .projects {
@@ -199,14 +208,17 @@ footer {
   .two-column {
     flex-direction: column;
   }
-  .two-column .first-column {
+  .two-column .left {
     padding: 0;
   }
-  .two-column .first-column img {
+  .two-column .left img {
     width: 95%;
   }
   .two-column hr {
     display: none;
+  }
+  .skills .left {
+    width: auto;
   }
 }
 @media only screen and (max-width: 768px) {

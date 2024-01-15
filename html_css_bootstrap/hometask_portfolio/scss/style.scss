@@ -72,7 +72,7 @@ html {
 .button--cta {
   display: inline-block;
   margin-left: auto;
-  padding: 10px;
+  padding: 0.8rem;
 
   a {
     color: $light-color;
@@ -235,6 +235,12 @@ footer {
       display: none;
     }
 
+  }
+
+  .skills {
+    .left {
+      width: auto;
+    }
   }
 }
 
