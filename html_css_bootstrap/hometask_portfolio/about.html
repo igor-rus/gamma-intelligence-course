@@ -4,41 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Portfolio page</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="wrapper">
-        <header class="navigation">
-            <div class="burger-menu" id="toggle">
-                <div class="burger-menu__line"></div>
-                <div class="burger-menu__line"></div>
-                <div class="burger-menu__line"></div>
-            </div>
-            <div class="button--cta">
-                <a href="mailto:igy1986@gmail.com">Contact me</a>
-            </div>
-            <ul class="navigation__items" id="navigation-items">
-                <li class="navigation-item">
-                    <a class="navigation-item__link" href="about.html">About</a>
-                </li>
-                <li class="navigation-item">
-                    <a class="navigation-item__link" href="../hometask_portfolio/pages/hobbies.html">Hobbies</a>
-                </li>
-                <li class="navigation-item">
-                    <a class="navigation-item__link" href="../hometask_portfolio/pages/projects.html">Projects</a>
-                </li>
-            </ul>
-        </header>
-        <section class="two-column">
-            <div class="first-column">
-                <img class="polaroid" src="../hometask_portfolio/assets/static/profile_picture.webp" alt="profile picture">
-            </div>
-            <hr class="vertical" />
-            <div class="second-column">
+<div class="wrapper">
+    <header class="navigation">
+        <div class="burger-menu" id="toggle">
+            <div class="burger-menu__line"></div>
+            <div class="burger-menu__line"></div>
+            <div class="burger-menu__line"></div>
+        </div>
+        <div class="button--cta">
+            <a href="mailto:igy1986@gmail.com">Contact me</a>
+        </div>
+        <ul class="navigation__items" id="navigation-items">
+            <li class="navigation-item">
+                <a class="navigation-item__link" href="about.html">About</a>
+            </li>
+            <li class="navigation-item">
+                <a class="navigation-item__link" href="../hometask_portfolio/pages/hobbies.html">Hobbies</a>
+            </li>
+            <li class="navigation-item">
+                <a class="navigation-item__link" href="../hometask_portfolio/pages/projects.html">Projects</a>
+            </li>
+        </ul>
+    </header>
+    <section class="two-column">
+        <div class="left">
+            <img class="polaroid" src="../hometask_portfolio/assets/static/profile_picture.webp" alt="profile picture">
+        </div>
+        <hr class="vertical"/>
+        <div class="right">
                 <pre>Hello, I am Igor!
 
 Software engineer equipped with extensive experience in software development.
@@ -51,55 +54,63 @@ Into competitive sports: fencing
 Hobbies: treasure hunting, Board games
 Likes: snowboarding, reading detective novels
                 </pre>
-            </div>
-        </section>
-        <section class="skills">
+        </div>
+    </section>
+    <section class="skills">
+        <div class="left">
             <h4>Skills</h4>
-            <pre>
-                Technical:
-                <ul>
-                    <li><b>Programming languages:</b> Java, JavaScript, TypeScript, C#</li>
-                    <li><b>Frameworks:</b> Spring, SpringBoot, Play, Wicket, Hibernate</li>
-                    <li><b>Web development:</b> HTML, CSS, React, Vuejs, Node</li>
-                    <li><b>Database management:</b> SQL, NoSQL, PostgreSQL, MongoDB</li>
-                    <li><b>Cloud platforms:</b> Google Cloud, Oracle cloud</li>
-                    <li><b>Cloud platforms:</b> Knowledge of DevOps tools: Docker, Kubernetes, CI/CD</li>
-                    <li><b>Messaging:</b> Apache Kafka</li>
-                    <li><b>Testing frameworks:</b> Mockito, Junit, Spock</li>
-                    <li><b>Version control systems:</b> Git, SVN, Visual SourceSafe</li>
-                    <li><b>Monitoring systems:</b> Datadog, GCP Montiroing, Sentry</li>
-                </ul>
-                
-                Soft:  
-                <ul>
-                    <li><b>Communication:</b> Effective communication is key for understanding project requirements,
-explaining technical concepts to non-technical stakeholders, and collaborating
-with team members.</li>
-                    <li><b>Problem-Solving:</b> The core of software engineering is solving problems.
-Being able to think analytically and approach
-problems creatively is vital.</li>
-                    <li><b>Continuous Learning:</b> A willingness to continuously learn and stay updated
-with the latest technological advancements and programming languages.</li>
-                    <li><b>Empathy and User Focus:</b> Understanding and empathizing with user needs and experiences
-can greatly improve the quality and usability of software products.</li>
-                </ul>
-            </pre>
-        </section>
-        <footer>
-            <div class="social-media">
-                <a class="social-media__item" href="https://www.facebook.com/igor.rusovitch"><img src="assets/icons/facebook.png" alt="facebook_logo" /></a>
-                <a class="social-media__item" href="https://www.instagram.com/igy1986"><img src="assets/icons/insta.png" alt="instagram_logo" /></a>
-                <a class="social-media__item" href="https://t.me/YngvarrNord"><img src="assets/icons/telega.png" alt="telegram_logo" /></a>
-            </div>
-        </footer>
-    </div>
+        </div>
+        <div class="right">
+            Technical:
+            <ul>
+                <li><b>Programming languages:</b> Java, JavaScript, TypeScript, C#</li>
+                <li><b>Frameworks:</b> Spring, SpringBoot, Play, Wicket, Hibernate</li>
+                <li><b>Web development:</b> HTML, CSS, React, Vuejs, Node</li>
+                <li><b>Database management:</b> SQL, NoSQL, PostgreSQL, MongoDB</li>
+                <li><b>Cloud platforms:</b> Google Cloud, Oracle cloud</li>
+                <li><b>Cloud platforms:</b> Knowledge of DevOps tools: Docker, Kubernetes, CI/CD</li>
+                <li><b>Messaging:</b> Apache Kafka</li>
+                <li><b>Testing frameworks:</b> Mockito, Junit, Spock</li>
+                <li><b>Version control systems:</b> Git, SVN, Visual SourceSafe</li>
+                <li><b>Monitoring systems:</b> Datadog, GCP Montiroing, Sentry</li>
+            </ul>
+            <br>
+            Soft:
+            <ul>
+                <li><b>Communication:</b> Effective communication is key for understanding project requirements,
+                    explaining technical concepts to non-technical stakeholders,
+                    and collaborating with team members.</li>
+                <li><b>Problem-Solving:</b> The core of software engineering is solving problems.
+                    Being able to think analytically and approach
+                    problems creatively is vital.
+                </li>
+                <li><b>Continuous Learning:</b> A willingness to continuously learn and stay updated
+                    with the latest technological advancements and programming languages.
+                </li>
+                <li><b>Empathy and User Focus:</b> Understanding and empathizing with user needs and experiences
+                    can greatly improve the quality and usability of software products.
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <div class="social-media">
+            <a class="social-media__item" href="https://www.facebook.com/igor.rusovitch"><img
+                    src="assets/icons/facebook.png" alt="facebook_logo"/></a>
+            <a class="social-media__item" href="https://www.instagram.com/igy1986"><img src="assets/icons/insta.png"
+                                                                                        alt="instagram_logo"/></a>
+            <a class="social-media__item" href="https://t.me/YngvarrNord"><img src="assets/icons/telega.png"
+                                                                               alt="telegram_logo"/></a>
+        </div>
+    </footer>
+</div>
 
 </body>
 <script>
     const toggleButton = document.getElementById('toggle');
     const navigationItems = document.getElementById('navigation-items');
     document.querySelectorAll('.navigation-item__link').forEach(link => {
-        if(link.href === window.location.href) {
+        if (link.href === window.location.href) {
             link.setAttribute('aria-current', 'page');
         }
     });

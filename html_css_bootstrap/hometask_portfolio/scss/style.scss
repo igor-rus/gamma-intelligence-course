@@ -1,8 +1,9 @@
 @import '_config';
 
-@font-face {
-  font-family: 'Courgette', cursive;
-  src: url('../assets/fonts/Courgette/Courgette-Regular.ttf');
+html {
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 400;
+  font-style: normal;
 }
 
 * {
@@ -23,7 +24,6 @@
 
 .navigation {
   background-color: $main-color;
-  font-family: 'Courgette', cursive;
   display: flex;
   align-items: center;
 }
@@ -92,10 +92,7 @@
 
 .polaroid {
   background: #fff;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
+  padding: 1rem 1rem 2rem;
   box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.2);
   transform: rotate(3deg);
 }
@@ -115,16 +112,24 @@ pre {
   white-space: -moz-pre-wrap;
   white-space: -o-pre-wrap;
   word-wrap: break-word;
+  font-family: "Anonymous Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
 };
 
 .two-column {
   display: flex;
   padding: 1.5rem;
-
+  text-align: left;
   justify-content: space-between;
 
-  .first-column {
+  .left {
     padding-left: 1rem;
+  }
+
+  .right {
+    padding-right: 1rem;
   }
 
   ul {
@@ -147,6 +152,9 @@ pre {
   justify-content: space-between;
   ul {
     list-style-position: inside;
+  }
+  .left {
+    width: 50%
   }
 }
 
@@ -216,7 +224,7 @@ footer {
   .two-column {
     flex-direction: column;
 
-    .first-column {
+    .left {
       padding: 0;
       img {
         width: 95%;
