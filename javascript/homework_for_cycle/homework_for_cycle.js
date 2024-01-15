@@ -4,13 +4,12 @@ const numbers = [4, 3, 10, 99, 23, 41, 5, 12, 23, 41, 12, 32];
 
 for (let i = 0; i < numbers.length; i++) {
     let current = numbers[i];
-    if (current % 2 === 0 && current < 23) {
-        console.log(current);
-    }
     if (current === 23) {
         break;
     }
-
+    if (current % 2 === 0) {
+        console.log(current);
+    }
 }
 
 
@@ -81,7 +80,7 @@ console.log(largestOfThree(3, -1, 99));
 // написать программу которая выведет в консоль число и FIZZ если число делится на 3 без остатка
 // выведет в консоль число и BUZZ если число делится на 5 без остатка
 // выведет в консоль число и FIZZ BUZZ если число делится на 3 и на 5 без остатка
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i <= 100; i++) {
     if (((i % 5) === 0) && ((i % 3) === 0)) {
         console.log(`${i} FIZZ BUZZ`);
     } else if ((i % 5) === 0) {
