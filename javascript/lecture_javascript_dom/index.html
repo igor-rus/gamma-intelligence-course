@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html, body {
+            background-color: #BC986A;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: dodgerblue;
+            border: 3px solid white;
+            border-radius: 15px;
+        }
+        #main-heading {
+            color: white;
+            margin: 10px 0;
+        }
+        .list-item {
+            background-color: white;
+            list-style-type: none;
+            padding: 50px 50px;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+        .container.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container" id="sports">
+    <h1 id="main-heading">Favourite sports</h1>
+    <ul>
+        <li class="list-item"><span>Fencing</span></li>
+        <li class="list-item">Snowboarding</li>
+        <li class="list-item">Weight lifting</li>
+        <li class="list-item">Cycling</li>
+        <li class="list-item">Table tennis</li>
+    </ul>
+</div>
+<div class="container">
+    <h1 id="heading">Example 1</h1>
+    <button class="btn btn-1">Push me</button>
+</div>
+<div>
+    <input type="text" name="name" id="name">
+    <button class="btn btn-2">Say Hello</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
