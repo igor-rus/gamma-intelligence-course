@@ -5,8 +5,6 @@
   src: url('../assets/fonts/Courgette/Courgette-Regular.ttf');
 }
 
-//General
-
 * {
   padding: 0;
   margin: 0;
@@ -22,8 +20,6 @@
   flex-direction: column;
   background-color: $light-color;
 }
-
-//Navigation
 
 .navigation {
   background-color: $main-color;
@@ -44,7 +40,7 @@
   margin-bottom: 3px;
 }
 
-.navigation-items {
+.navigation__items {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -81,8 +77,8 @@
   a {
     color: $light-color;
     background-color: $dark-color;
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.3rem;
     text-decoration: none;
   }
 }
@@ -117,13 +113,10 @@ pre {
   overflow-x: auto;
   white-space: pre-wrap;
   white-space: -moz-pre-wrap;
-  white-space: -pre-wrap;
   white-space: -o-pre-wrap;
   word-wrap: break-word;
 };
 
-
-//Main page
 .two-column {
   display: flex;
   padding: 1.5rem;
@@ -157,11 +150,22 @@ pre {
   }
 }
 
-//Hobbies
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(20rem,50%), 1fr));
 
+  column-gap: 0.5rem;
+  row-gap: 2.5em;
+  padding: 1rem;
 
+  ul {
+    list-style-position: inside;
+  }
 
-//Footer
+  .polaroid {
+    transform: none;
+  }
+}
 
 footer {
   background-color: $main-color;
@@ -177,7 +181,7 @@ footer {
   }
 }
 
-//Breakpoints
+
 @media only screen and (max-width: 480px) {
   .navigation {
     flex-wrap: wrap;
@@ -185,7 +189,6 @@ footer {
 
   .navigation__items {
     width: 100%;
-    text-align: center;
     display: none;
   }
 
@@ -225,10 +228,11 @@ footer {
     }
 
   }
-
 }
 
-
-
-
-
+@media only screen and (max-width: 768px) {
+  .projects {
+    grid-template-columns: repeat(1, 1fr);
+    transform: none;
+  }
+}
