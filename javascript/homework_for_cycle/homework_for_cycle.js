@@ -73,6 +73,7 @@ function largestOfThree(a, b, c) {
     return Math.max(a, b, c);
 }
 
+console.log(largestOfThree(3, -1, 99));
 
 
 // Fizz Buzz
@@ -80,3 +81,12 @@ function largestOfThree(a, b, c) {
 // написать программу которая выведет в консоль число и FIZZ если число делится на 3 без остатка
 // выведет в консоль число и BUZZ если число делится на 5 без остатка
 // выведет в консоль число и FIZZ BUZZ если число делится на 3 и на 5 без остатка
+for (let i = 0; i < 100; i++) {
+    if (((i % 5) === 0) && ((i % 3) === 0)) {
+        console.log(`${i} FIZZ BUZZ`);
+    } else if ((i % 5) === 0) {
+        console.log(`${i} BUZZ`);
+    } else if ((i % 3) === 0) {
+        console.log(`${i} FIZZ`);
+    }
+}
