@@ -28,14 +28,14 @@ html {
 
 .burger-menu {
   display: none;
-  padding: 10px;
+  padding: 0.6rem;
 }
 
 .burger-menu__line {
-  width: 20px;
-  height: 4px;
+  width: 1.5rem;
+  height: 0.2rem;
   background-color: #FBEEC1;
-  margin-bottom: 3px;
+  margin-bottom: 0.2rem;
 }
 
 .navigation__items {
@@ -44,20 +44,20 @@ html {
   list-style: none;
 }
 
-.navigation-item {
+.navigation__item {
   display: inline-block;
-  margin: 10px;
+  margin: 0.8rem;
 }
 
-.navigation-item a {
+.navigation__item a {
   text-decoration: none;
   font-weight: bolder;
   color: #FBEEC1;
-  padding: 5px 0;
+  padding: 0.5rem 0;
 }
 
-.navigation-item a:hover,
-.navigation-item a:active {
+.navigation__item a:hover,
+.navigation__item a:active {
   color: #DAAD86;
   border-bottom: 2px solid #DAAD86;
 }
@@ -180,6 +180,18 @@ footer {
   padding: 1rem;
 }
 
+.pictures {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5rem;
+}
+.pictures :first-child .polaroid {
+  transform: rotate(-15deg);
+}
+.pictures :last-child .polaroid {
+  transform: rotate(10deg);
+}
+
 @media only screen and (max-width: 480px) {
   .navigation {
     flex-wrap: wrap;
@@ -216,6 +228,12 @@ footer {
   }
   .two-column hr {
     display: none;
+  }
+  .pictures {
+    flex-direction: column;
+  }
+  .polaroid {
+    transform: none;
   }
   .skills .left {
     width: auto;
