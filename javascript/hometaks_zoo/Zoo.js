@@ -15,8 +15,8 @@ class Animal {
         return this.#species;
     }
 
-    describe() {
-        return `This is a ${this.species} named ${this.name}`;
+    description() {
+        return `A ${this.species} named ${this.name}`;
     }
 }
 
@@ -26,10 +26,16 @@ class Mammal extends Animal {
     constructor(name, species, furColor) {
         super(name, species);
         this.#furColor = furColor;
+        this._furColor = furColor;
     }
 
-    describe() {
-        return super.describe() + ' and it has ' + this.#furColor + ' fur color';
+
+    get furColor() {
+        return this.#furColor;
+    }
+
+    description() {
+        return super.description() + ' and it has ' + this.#furColor + ' fur color';
     }
 }
 
@@ -42,14 +48,20 @@ class Bird extends Animal {
             throw new Error('Wing span should be floating point number');
         }
         this.#wingSpan = wingSpan;
+        this._wingSpan = wingSpan;
+    }
+
+
+    get wingSpan() {
+        return this.#wingSpan;
     }
 
     #isFloat(n) {
         return Number(n) === n && n % 1 !== 0;
     }
 
-    describe() {
-        return super.describe() + ' and it has ' + this.#wingSpan + ' wing span';
+    description() {
+        return super.description() + ' and it has ' + this.#wingSpan + ' wing span';
     }
 }
 
@@ -59,10 +71,16 @@ class Reptile extends Animal {
     constructor(name, species, scaleType) {
         super(name, species);
         this.#scaleType = scaleType;
+        this._scaleType = scaleType;
     }
 
-    describe() {
-        return super.describe() + ' and it has ' + this.#scaleType + ' scale type';
+
+    get scaleType() {
+        return this.#scaleType;
+    }
+
+    description() {
+        return super.description() + ' and it has ' + this.#scaleType + ' scale type';
     }
 }
 
@@ -77,7 +95,7 @@ class Zoo {
         if (animal instanceof Animal) {
             this.#animals.push(animal);
         } else {
-            throw new Error("Only animals allowed")
+            throw new Error('Only animals allowed')
         }
     }
 
@@ -86,14 +104,11 @@ class Zoo {
     }
 
     list_animals() {
-        this.#animals.forEach((animal) => console.log(animal.describe()));
+        this.#animals.forEach((animal) => console.log(animal.description()));
     }
 
     get_animals_by_species(species) {
-        console.log(`We have following ${species} in our zoo:`)
-        this.#animals
-            .filter((animal) => animal.species === species.toLowerCase())
-            .forEach((specie) => console.log(specie.describe()));
+        return this.#animals.filter((animal) => animal.species === species.toLowerCase())
     }
 
     remove_animal(name) {
@@ -102,17 +117,23 @@ class Zoo {
 }
 
 const zoo = new Zoo();
+const king = new Mammal('Simba', 'Lion', 'golden');
+console.log(`Lion kings's fur color is ${king.furColor}`);
 console.log(`Zoo has: ${zoo.count_animals} animals`);
-zoo.add_animal(new Bird("COCO", "PARROT", 3.5));
-zoo.add_animal(new Bird("JACO", "PARROT", 2.5));
-zoo.add_animal(new Mammal("KITTY", "TIGER", "STRIPED"));
-zoo.add_animal(new Reptile("GRUMPY", "IGUANA", "HEX"));
-zoo.add_animal(new Mammal("Panny", "Panda", "White"));
-zoo.add_animal(new Bird("Gentoo", "Penguin", 0.5));
+zoo.add_animal(new Bird('COCO', 'PARROT', 3.5));
+zoo.add_animal(new Bird('JACO', 'PARROT', 2.5));
+zoo.add_animal(new Mammal('KITTY', 'TIGER', 'STRIPED'));
+zoo.add_animal(new Reptile('GRUMPY', 'IGUANA', 'HEX'));
+zoo.add_animal(new Mammal('Panny', 'Panda', 'White'));
+zoo.add_animal(new Bird('Gentoo', 'Penguin', 0.5));
+zoo.add_animal(king);
+console.log(`Added some. Zoo now has: ${zoo.count_animals} animals`);
+console.log('There are following animals in the zoo:')
 zoo.list_animals();
-console.log(`Zoo has: ${zoo.count_animals} animals`);
-console.log(`List birds:`)
-zoo.get_animals_by_species("parrot");
-console.log('-------------------------')
-// zoo.remove_animal("COCO");
-// zoo.list_animals();
+console.log('List birds:')
+zoo.get_animals_by_species('parrot').forEach((parrot) => console.log(parrot.description()));
+console.log('---------');
+console.log('Depart COCO from the zoo')
+zoo.remove_animal('COCO');
+console.log('Now we have following animals left')
+zoo.list_animals();
