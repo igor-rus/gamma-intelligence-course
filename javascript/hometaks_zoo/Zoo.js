@@ -74,7 +74,11 @@ class Zoo {
     }
 
     add_animal(animal) {
-        this.#animals.push(animal);
+        if (animal instanceof Animal) {
+            this.#animals.push(animal);
+        } else {
+            throw new Error("Only animals allowed")
+        }
     }
 
     get count_animals() {
@@ -104,9 +108,11 @@ zoo.add_animal(new Bird("JACO", "PARROT", 2.5));
 zoo.add_animal(new Mammal("KITTY", "TIGER", "STRIPED"));
 zoo.add_animal(new Reptile("GRUMPY", "IGUANA", "HEX"));
 zoo.add_animal(new Mammal("Panny", "Panda", "White"));
+zoo.add_animal(new Bird("Gentoo", "Penguin", 0.5));
 zoo.list_animals();
 console.log(`Zoo has: ${zoo.count_animals} animals`);
-zoo.get_animals_by_species("tiger");
+console.log(`List birds:`)
+zoo.get_animals_by_species("parrot");
 console.log('-------------------------')
-zoo.remove_animal("COCO");
-zoo.list_animals();
+// zoo.remove_animal("COCO");
+// zoo.list_animals();
