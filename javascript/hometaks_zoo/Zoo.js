@@ -26,6 +26,7 @@ class Mammal extends Animal {
     constructor(name, species, furColor) {
         super(name, species);
         this.#furColor = furColor;
+        this._furColor = furColor;
     }
 
 
@@ -47,6 +48,12 @@ class Bird extends Animal {
             throw new Error('Wing span should be floating point number');
         }
         this.#wingSpan = wingSpan;
+        this._wingSpan = wingSpan;
+    }
+
+
+    get wingSpan() {
+        return this.#wingSpan;
     }
 
 
@@ -69,6 +76,7 @@ class Reptile extends Animal {
     constructor(name, species, scaleType) {
         super(name, species);
         this.#scaleType = scaleType;
+        this._scaleType = scaleType;
     }
 
 
